@@ -10,9 +10,9 @@ export function List({ list, remove }) {
     function updateTotal() {
         let curr_t = 0;
         for (const item of list) {
-            curr_t = parseFloat(curr_t) + parseFloat(item.price.replace('$',''));
+            let t = parseFloat(curr_t) + parseFloat(item.price.replace('$',''));
+            setTotal(t.toFixed(2));
         }
-        setTotal(curr_t.toFixed(2))
     }
 
     function Total() {
