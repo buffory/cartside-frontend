@@ -7,12 +7,11 @@ function App() {
   const [shoppingList, setShoppingList] = useState([])
 
   function addToShoppingList(product) {
-      shoppingList.push(product);
-      setShoppingList(shoppingList);
+      setShoppingList([...shoppingList, {...product, uuid: crypto.randomUUID()}]);
   }
 
   function removeFromShoppingList(product) {
-      setShoppingList(shoppingList.filter(p => p !== product.product_id));
+      setShoppingList(shoppingList.filter(p => p.uuid !== product.uuid));
   }
 
   return (
@@ -20,7 +19,7 @@ function App() {
         <div className="w-full flex flex-col p-5">
             <div className="w-full flex flex-col space-y-5">
                 <h1>cartside</h1>
-                <div className="w-full flex flex-row">
+                <div className="w-full flex flex-row space-x-6">
                     {shoppingList ? <List list={shoppingList} remove={removeFromShoppingList} /> : null }
                     <Products list={shoppingList} add={addToShoppingList} />
                 </div>
