@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { List } from './List.jsx';
 import { Products } from './Products.jsx';
-import RetailerMap from './RetailerMap.jsx'
+import ProductMap from './ProductMap';
 
 function App() {
   const [shoppingList, setShoppingList] = useState([])
@@ -24,7 +24,7 @@ function App() {
                     {shoppingList ? <List list={shoppingList} remove={removeFromShoppingList} /> : null }
                     <Products list={shoppingList} add={addToShoppingList} />
                 </div>
-                {shoppingList ? <RetailerMap list={shoppingList} /> : null }
+                {shoppingList ? <ProductMap products={shoppingList} /> : null }
             </div>
         </div>
     </>
