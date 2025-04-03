@@ -18,7 +18,7 @@ function App() {
   return (
     <>
         <div className="w-full flex flex-col p-5">
-            <div className="w-full flex flex-col space-y-5">
+            <div className="w-full flex flex-col items-center justify-center space-y-5">
                 <h1>cartside</h1>
                 <div className="w-full flex flex-row space-x-6">
                     {shoppingList ? <List list={shoppingList} remove={removeFromShoppingList} /> : null }
