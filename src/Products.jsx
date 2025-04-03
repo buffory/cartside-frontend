@@ -8,7 +8,7 @@ export function Products({ list, add }) {
    
     async function getProducts() {
         try {
-            const res = await fetch(`http://localhost:3000/products/search?name=${query.current}`);
+            const res = await fetch(`http://localhost:3000/products?product=${query.current}`);
             if (!res.ok) {
                 throw new Error(`error`);
             }

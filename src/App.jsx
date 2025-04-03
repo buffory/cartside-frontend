@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { List } from './List.jsx';
 import { Products } from './Products.jsx';
+import RetailerMap from './RetailerMap.jsx'
 
 function App() {
   const [shoppingList, setShoppingList] = useState([])
@@ -23,6 +24,7 @@ function App() {
                     {shoppingList ? <List list={shoppingList} remove={removeFromShoppingList} /> : null }
                     <Products list={shoppingList} add={addToShoppingList} />
                 </div>
+                {shoppingList ? <RetailerMap list={shoppingList} /> : null }
             </div>
         </div>
     </>
