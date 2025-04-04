@@ -1,31 +1,17 @@
 import { useState } from 'react';
 import './App.css';
-import { List } from './List.jsx';
-import { Products } from './Products.jsx';
-import { Route } from './Route.jsx';
+import { Demo } from './Demo.jsx';
+import { Header } from './Header.jsx';
+import { Hero } from './Hero.jsx';
 
 function App() {
-  const [shoppingList, setShoppingList] = useState([])
-
-  function addToShoppingList(product) {
-      setShoppingList([...shoppingList, {...product, uuid: crypto.randomUUID()}]);
-  }
-
-  function removeFromShoppingList(product) {
-      setShoppingList(shoppingList.filter(p => p.uuid !== product.uuid));
-  }
 
   return (
     <>
+        <Header />
         <div className="w-full flex flex-col p-5">
-            <div className="w-full flex flex-col items-center justify-center space-y-5">
-                <h1>cartside</h1>
-                <div className="w-full flex flex-row space-x-6">
-                    {shoppingList ? <List list={shoppingList} remove={removeFromShoppingList} /> : null }
-                    <Products list={shoppingList} add={addToShoppingList} />
-                </div>
-                {shoppingList ? <Route list={shoppingList} /> : null }
-            </div>
+            <Hero />
+            <Demo />
         </div>
     </>
   )
