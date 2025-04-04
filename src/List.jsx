@@ -28,7 +28,7 @@ export function List({ list, remove }) {
                 { hover ? null : <h2>{i.retailer}</h2>}
                 <h2>{i.name}</h2>
                 {hover ? null : <h2>{i.price}</h2> }
-                {hover ? <button onClick={() => remove(i)}>remove</button> : null}
+                {hover ? <button className='green-button' onClick={() => remove(i)}>remove</button> : null}
             </div>
         );
     }

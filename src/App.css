@@ -6,13 +6,19 @@
   padding: 2rem;
   text-align: center;
 }
+* {
+    font-family: 'Questrial', sans-serif;
+}
 
 body {
     background-color: #f6f1ea;
 }
 
 .title {
-    color: #808080
+    color: #000000;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 h2 {
@@ -24,6 +30,28 @@ input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important;
+}
+
+button: {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none !important;  
 }
 
 .header {
@@ -74,6 +102,23 @@ input {
 .menu-button:hover {
      background-color: #efefef; /* Slightly darker green on hover */
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.product-card:hover {
+    border-color: #4cd964;
+    border: 3px solid #4cd964;
+    cursor: pointer;
+}
 
 .try-button { background-color: #4cd964; /* Green background */ color: #000; /* Black text */ border: none; padding: 8px 18px; /* Adjusted padding */
     color: #ffffff;
@@ -88,6 +133,48 @@ input {
      background-color: #3dbf50; /* Slightly darker green on hover */
 }
 
+a {
+    color: #4cd964;
+}
+
+select {
+    border-radius: 8px;
+    color: #4cd964;
+}
+
 p {
     color: #808080;
+}
+
+.green-button {
+    color: #ffffff;
+    background-color: #4cd964
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 50%;               
+  background-color:#000000;
+  height: 2px;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.zipInput {
+    border: none;
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
 }

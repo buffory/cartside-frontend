@@ -9,9 +9,10 @@ function App() {
   return (
     <>
         <Header />
-        <div className="w-full flex flex-col p-5">
-            <Hero />
-            <Demo />
+        <div className="scroll-container w-full flex flex-col p-5">
+            <section><Hero /></section>
+            <section><Demo /></section>:w
+
         </div>
     </>
   )

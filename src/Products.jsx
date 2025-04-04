@@ -21,7 +21,7 @@ export function Products({ list, add }) {
 
     function ProductTab({ product }) {
         return (
-            <div className="flex flex-col justify-center items-center border-[#808080] p-4 border rounded-xl"
+            <div className="product-card flex flex-col justify-center items-center border-[#808080] p-4 border rounded-xl"
             onClick={() => add(product)}>
                 <img src={product.image_url} alt={product.name} />
                 <h2 className="text-md">{product.retailer}</h2>
@@ -45,9 +45,9 @@ export function Products({ list, add }) {
     function SearchBar() {
         return (
             <div className="flex space-x-4 flex-row w-full max-h-[50px] justify-between">
-                <div>
+                <div className='flex flex-row space-x-4'>
                     <input type="text" placeholder="milk..?" onChange={(e) => query.current = e.target.value} />
-                    <button onClick={async () => await getProducts()}>search</button>
+                    <button className='green-button' onClick={async () => await getProducts()}>search</button>
                 </div>
                 <div className="flex flex-row space-x-2">
                     <select className="border p-2" name="products" id="product-select">

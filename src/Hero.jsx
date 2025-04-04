@@ -1,6 +1,6 @@
 export function Hero() {
     return (
-        <div className="page-container w-full flex flex-col items-center justify-around shadow h-[90vh] mt-24 space-y-12 p-12">
+        <div className="page-container w-full flex flex-col items-center justify-around p-12 shadow h-[90vh] mt-24 space-y-12 p-12">
             <div className='flex flex-row'>
                 <div className="w-1/2 flex flex-col">
                     <h1 className="hero-heading">Never overpay for groceries again.</h1>
